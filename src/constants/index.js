@@ -121,15 +121,15 @@ const projects = [
       'MasMedi is India’s one-of-a-kind tech-driven Healthcare app which provides local and hyperlocal Diagnostic Labs (Pathology & Radiology) services as a marketplace at your fingertips.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'iOS',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'xCode',
         color: 'pink-text-gradient',
       },
     ],
@@ -143,15 +143,15 @@ const projects = [
       'This app has what you need to stay on track with a healthy lifestyle. Get a customizable routine exercise Plan, personalized 4 reminders and tips to make you feel relaxed, stress-free and fit.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'iOS',
         color: 'blue-text-gradient',
       },
       {
-        name: 'stripe',
+        name: 'swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'xCode',
         color: 'pink-text-gradient',
       },
     ],
@@ -165,15 +165,15 @@ const projects = [
       'Welcome to Contact App Manager - A One Step EASY & SAFE Solution for sharing your contact. Forget about dictating your number in the ears anymore. Share all the info you want from your profile with just one click by just scanning the customized QR code and save it directly in the phone book.',
     tags: [
       {
-        name: 'react',
+        name: 'iOS',
         color: 'blue-text-gradient',
       },
       {
-        name: 'axios',
+        name: 'swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'xCode',
         color: 'pink-text-gradient',
       },
     ],
@@ -187,15 +187,15 @@ const projects = [
       'Dallal App allows you to browse properties offered for sale or rent and crosses all geographical barriers in delivering information about the property. The application is a link between the seller and the buyer without the need for intermediaries.',
     tags: [
       {
-        name: 'react',
+        name: 'iOS',
         color: 'blue-text-gradient',
       },
       {
-        name: 'daisyui',
+        name: 'swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'xCode',
         color: 'pink-text-gradient',
       },
     ],
