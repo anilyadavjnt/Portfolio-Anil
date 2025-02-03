@@ -125,11 +125,11 @@ const projects = [
         color: 'blue-text-gradient',
       },
       {
-        name: 'swift',
+        name: 'Swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'xCode',
+        name: 'Xcode',
         color: 'pink-text-gradient',
       },
     ],
@@ -147,11 +147,11 @@ const projects = [
         color: 'blue-text-gradient',
       },
       {
-        name: 'swift',
+        name: 'Swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'xCode',
+        name: 'Xcode',
         color: 'pink-text-gradient',
       },
     ],
@@ -169,11 +169,11 @@ const projects = [
         color: 'blue-text-gradient',
       },
       {
-        name: 'swift',
+        name: 'Swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'xCode',
+        name: 'Xcode',
         color: 'pink-text-gradient',
       },
     ],
@@ -191,11 +191,11 @@ const projects = [
         color: 'blue-text-gradient',
       },
       {
-        name: 'swift',
+        name: 'Swift',
         color: 'green-text-gradient',
       },
       {
-        name: 'xCode',
+        name: 'Xcode',
         color: 'pink-text-gradient',
       },
     ],
