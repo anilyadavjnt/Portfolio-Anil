@@ -1,55 +1,49 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { github } from '../assets';
 import SectionWrapper from '../hoc/SectionWrapper';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import ReactReadMoreReadLess from 'react-read-more-read-less';
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  view,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, description, tags, image, view }) => {
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    // <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-4 rounded-2xl sm:w-[540px] md:w-[280px] lg:w-[260px] w-full'
       >
-        <div className='relative w-full h-[230px]' onClick={() => window.open(view, '_blank')}>
+        <div className='relative w-full h-[220px]'>
           <img
+            onClick={() => window.open(view, '_blank')}
             src={image}
             alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
+            className='w-full h-full object-bottom rounded-xl'
           />
-
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, '_blank')}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
-          </div>
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[15px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[13px]'>
+            <ReactReadMoreReadLess
+              charLimit={25}
+              readMoreText={'Read more ▼'}
+              readLessText={'Read less ▲'}
+              readMoreClassName={'text-yellow-100'}
+              readLessClassName={'text-yellow-100'}
+            >
+              {description}
+            </ReactReadMoreReadLess>
+          </p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -63,11 +57,78 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    // </motion.div>
   );
 };
 
 const Works = () => {
+  // var settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 3000,
+  //   pauseOnHover: true,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1025,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 820,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         dots: true,
+  //       },
+  //     },
+  //   ],
+  // };
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 740,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -88,10 +149,12 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      <div className='mt-20 gap-7'>
+        <Slider {...settings} >
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </Slider>
       </div>
     </>
   );
