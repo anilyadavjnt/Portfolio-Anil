@@ -70,7 +70,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href='https://www.youtube.com/@anilyadav_iosdev/videos'
+              href='https://www.youtube.com/@anilyadav_iosdev'
               target='_blank'
               rel='noopener noreferrer'
             >
