@@ -1,23 +1,23 @@
 /* eslint-disable react-refresh/only-export-components */
-import { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
-import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
+import { styles } from "../styles";
+import { EarthCanvas } from "./canvas";
+import { SectionWrapper } from "../hoc";
+import { slideIn } from "../utils/motion";
 
-// 6_o_fZVpGtpli8EJH
-// template_4fird09
-// service_62enjor
+// thfvqNu9nZeUYf4zV
+// template_g2t744h
+// service_td8m3oo
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -42,30 +42,30 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: 'Anil Kumar Yadav',
+          to_name: "Anil Kumar Yadav",
           from_email: form.email,
-          to_email: 'anilyadavjnt@gmail.com',
+          to_email: "anilyadavjnt@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
           setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({
-            name: '',
-            email: '',
-            message: '',
+            name: "",
+            email: "",
+            message: "",
           });
         },
         (error) => {
           setLoading(false);
           console.error(error);
 
-          alert('Ahh, something went wrong. Please try again.');
-        }
+          alert("Ahh, something went wrong. Please try again.");
+        },
       );
   };
 
@@ -74,7 +74,7 @@ const Contact = () => {
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div
-        variants={slideIn('left', 'tween', 0.2, 1)}
+        variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
@@ -123,13 +123,13 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
 
       <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
+        variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         <EarthCanvas />
@@ -137,5 +137,4 @@ const Contact = () => {
     </div>
   );
 };
-
-export default SectionWrapper(Contact, 'contact');
+export default SectionWrapper(Contact, "contact");
