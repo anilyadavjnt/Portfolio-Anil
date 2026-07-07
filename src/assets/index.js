@@ -14,6 +14,7 @@ import git from "./tech/git.png";
 import xcodeIde from "./tech/xcodeIde.png";
 
 import freelancer from "./company/freelancer.png";
+import handsInTechnology from "./company/handsInTechnology.png";
 
 import project1 from "./projects/project1.png";
 import project2 from "./projects/project2.png";
@@ -36,6 +37,7 @@ export {
   git,
   xcodeIde,
   freelancer,
+  handsInTechnology,
   project1,
   project2,
   project3,
