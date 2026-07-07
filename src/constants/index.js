@@ -9,6 +9,7 @@ import {
   git,
   uikit,
   freelancer,
+  handsInTechnology,
   project1,
   project2,
   project3,
@@ -76,10 +77,27 @@ const technologies = [
 const experiences = [
   {
     title: "iOS Developer",
+    company_name: "Hands In Technology",
+    icon: handsInTechnology,
+    iconBg: "#383E56",
+    date: "2024 - Present",
+    points: [
+      "Designed and developed multiple iOS applications using Swift & UIKit.",
+      "Implemented complex UI using Storyboard, XIB & Auto Layout.",
+      "Integrated REST APIs, handled JSON parsing, pagination, and error handling.",
+      "Worked on OTT streaming apps, healthcare apps, and e-commerce solutions.",
+      "Integrated third-party SDKs: Firebase, Razorpay, Stripe, Google Maps, Facebook SDK.",
+      "Implemented subscription plans, in-app purchases, and payment gateways.",
+      "Published and maintained applications on the Apple App Store.",
+      "Collaborated with designers and backend teams to deliver scalable features.",
+    ],
+  },
+  {
+    title: "iOS Developer",
     company_name: "Freelancer",
     icon: freelancer,
     iconBg: "#383E56",
-    date: "2023 - Present",
+    date: "2023 - 2024",
     points: [
       "Actively seeking new opportunities to advance in the Mobile Development career as an iOS Developer.",
       "Known for infusing passion, enthusiasm, and a strong thirst for experiential learning into every project.",
